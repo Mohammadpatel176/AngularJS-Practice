@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/angular-1.8.2/angular.min.js"></script>
+    <title>First practical of Angularjs</title>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="nameCtrl">
+        <input type="text" ng-model="FirstName">
+        <input type="text" ng-model="LastName">
+        <p>Full Name: {{FirstName+ " "+ LastName}}</p>
+    </div>
+    <script>
+        var app=angular.module('myApp',[]);
+       app.controller('nameCtrl',function($scope){
+        $scope.FirstName="Mohammad";
+        $scope.LastName="Patel";
+       });
+    </script>
+</body>
+</html>

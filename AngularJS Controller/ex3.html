@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Controller Example3</title>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        FirstName= {{student.firstname}} <br>
+        LastName= {{student.lastname}}
+    </div>
+    <script>
+       angular.module('myApp', []).controller('myCtrl', function ($scope) {
+            $scope.student = { 'firstname': 'Mohammad', 'lastname': 'Patel' }
+        });
+    </script>
+</body>
+
+</html>

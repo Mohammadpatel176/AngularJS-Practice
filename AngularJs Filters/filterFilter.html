@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>AngularJS filter Filter</title>
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+	</script>
+</head>
+
+<body>
+	<div ng-app="myApp"
+		ng-controller="namesCtrl">
+		<h1 style="color:green;">
+			Hello
+		</h1>
+		<h3>AngularJS filter Filter</h3>
+		<ol>
+			<strong>
+				<li ng-repeat="x in names | filter : 'e'">
+					{{ x }}
+				</li>
+			</strong>
+		</ol>
+	</div>
+	<script>
+		angular.module('myApp', [])
+			.controller('namesCtrl', function($scope) {
+			$scope.names = [
+				'Jani', 'Carl', 'Margareth',
+				'Hege Mathew', 'Joey Tribiani',
+				'Gustav', 'Birgit', 'Mary', 'Kai'
+			];
+		});
+	</script>
+	<p>
+		This example displays the names containing the
+		character "e"(filter)
+	</p>
+</body>
+</html>

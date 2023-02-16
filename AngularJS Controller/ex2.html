@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>Controller Example2</title>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        Enter Message: <input type="text" ng-model="message"><br>
+        <button ng-click="showMessage(message)">show Message</button>
+    </div>
+    <script>
+        var app=angular.module('myApp', []);
+        app.controller('myCtrl',function($scope){
+            $scope.message="Hello ADIT";
+            $scope.showMessage=function(msg){
+                alert(msg);
+            }
+        });
+    </script>
+</body>
+</html>
